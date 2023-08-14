@@ -1,0 +1,19 @@
+<?php
+if(isset($_POST["submit"])) {
+    $file = $_FILES["file"]["tmp_name"];
+    $handle = fopen($file, "r");
+    
+    while(($data = fgetcsv($handle, 1000, ",")) !== false) {
+        $name = $data[0];
+        $mobNumber = $data[1];
+        $orderId = $data[2];
+        $email = $data[3];
+        
+        // Use database connection and insert data
+        // $sql = "INSERT INTO customers (name, mob_number, order_id, email) VALUES ('$name', '$mobNumber', '$orderId', '$email')";
+        // Execute the SQL query
+    }
+    
+    fclose($handle);
+}
+?>

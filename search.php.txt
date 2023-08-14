@@ -1,0 +1,9 @@
+<?php
+if(isset($_GET["search"])) {
+    $searchQuery = $_GET["searchQuery"];
+    
+    // Use database connection and perform a SELECT query based on the searchQuery
+    // $sql = "SELECT * FROM customers WHERE name LIKE '%$searchQuery%' OR mob_number LIKE '%$searchQuery%' OR order_id LIKE '%$searchQuery%' OR email LIKE '%$searchQuery%'";
+    // Execute the SQL query and display results
+}
+?>
